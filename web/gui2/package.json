@@ -3,7 +3,7 @@
   "version": "2.3.5",
   "license": "MIT",
   "engines": {
-    "node": ">=10.9.0 <13.0.0",
+    "node": ">=10.9.0",
     "yarn": ">=1.9.2 <2.3.1"
   },
   "scripts": {
@@ -32,7 +32,7 @@
     "@bazel/angular": "2.0.0",
     "@bazel/buildifier": "^3.4.0",
     "@bazel/karma": "2.0.0",
-    "@bazel/protractor": "2.0.0",
+    "@bazel/protractor": "3.0.0",
     "@bazel/rollup": "2.0.0",
     "@bazel/terser": "2.0.0",
     "@bazel/typescript": "2.0.0",
