@@ -10,8 +10,8 @@
 # build --define=ABSOLUTE_JAVABASE=<path/to/jdk>
 # build --define=RUN_WITH_ABSOLUTE_JAVABASE=true
 
-build --javabase=@bazel_tools//tools/jdk:remote_jdk11
-build --host_javabase=@bazel_tools//tools/jdk:remote_jdk11
+build --javabase=@org_onosproject_onos//tools/build/jdk:default_jdk
+build --host_javabase=@org_onosproject_onos//tools/build/jdk:default_jdk
 
 build --java_toolchain=@org_onosproject_onos//tools/build/jdk:default_toolchain
 build --host_java_toolchain=@org_onosproject_onos//tools/build/jdk:default_toolchain
