@@ -15,9 +15,9 @@ workspace(
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-RULES_NODEJS_VERSION = "3.0.0"
+RULES_NODEJS_VERSION = "3.6.0"
 
-RULES_NODEJS_SHA256 = "6142e9586162b179fdd570a55e50d1332e7d9c030efd853453438d607569721d"
+RULES_NODEJS_SHA256 = "0fa2d443571c9e02fcb7363a74ae591bdcce2dd76af8677a95965edf329d778a"
 
 http_archive(
     name = "build_bazel_rules_nodejs",
@@ -68,12 +68,13 @@ Try running `yarn bazel` instead.
 # TODO: remove the custom repositories once "rules_nodejs" supports v10.16.0 by default.
 node_repositories(
     node_repositories = {
-        "10.16.0-linux_arm64": ("node-v10.16.0-linux-arm64.tar.gz", "node-v10.16.0-linux-arm64", "2d84a777318bc95dd2a201ab8d700aea7e20641b3ece0c048399398dc645cbd7"),
-        "10.16.0-darwin_amd64": ("node-v10.16.0-darwin-x64.tar.gz", "node-v10.16.0-darwin-x64", "6c009df1b724026d84ae9a838c5b382662e30f6c5563a0995532f2bece39fa9c"),
-        "10.16.0-linux_amd64": ("node-v10.16.0-linux-x64.tar.xz", "node-v10.16.0-linux-x64", "1827f5b99084740234de0c506f4dd2202a696ed60f76059696747c34339b9d48"),
-        "10.16.0-windows_amd64": ("node-v10.16.0-win-x64.zip", "node-v10.16.0-win-x64", "aa22cb357f0fb54ccbc06b19b60e37eefea5d7dd9940912675d3ed988bf9a059"),
+        "16.3.0-linux_arm64": ("node-v16.3.0-linux-arm64.tar.gz", "node-v16.3.0-linux-arm64", "7040a1f2a0a1aa9cf0f66ec46d0049c6638cb4c05490c13ca71d298fa94ed8ce"),
+        "16.3.0-linux_amd64": ("node-v16.3.0-linux-x64.tar.gz", "node-v16.3.0-linux-x64", "86f6d06c05021ae73b51f57bb56569a2eebd4a2ecc0b881972a0572e465b5d27"),
+        "16.3.0-darwin_amd64": ("node-v16.3.0-darwin-x64.tar.gz", "node-v16.3.0-darwin-x64", "3e075bcfb6130dda84bfd04633cb228ec71e72d9a844c57efb7cfff130b4be89"),
+        "16.3.0-darwin_arm64": ("node-v16.3.0-darwin-arm64.tar.gz", "node-v16.3.0-darwin-arm64", "aeac294dbe54a4dfd222eedfbae704b185c40702254810e2c5917f6dbc80e017"),
+        "16.3.0-windows_amd64": ("node-v16.3.0-win-x64.zip", "node-v16.3.0-win-x64", "3352e58d3603cf58964409d07f39f3816285317d638ddb0a0bf3af5deb2ff364"),
     },
-    node_version = "10.16.0",
+    node_version = "16.3.0",
 )
 
 yarn_install(
