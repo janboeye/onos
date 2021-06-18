@@ -6,9 +6,9 @@ workspace(
     },
 )
 
-load("//tools/build/bazel:bazel_version.bzl", "check_bazel_version")
+#load("//tools/build/bazel:bazel_version.bzl", "check_bazel_version")
 
-check_bazel_version()
+#check_bazel_version()
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
