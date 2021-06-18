@@ -15,7 +15,7 @@
 """
 
 load("@npm//@bazel/typescript:index.bzl", "ts_library")
-load("@npm//@bazel/karma:index.bzl", "karma_web_test")
+load("@npm//@bazel/concatjs:index.bzl", "karma_web_test")
 
 package(default_visibility = ["//:__subpackages__"])
 
