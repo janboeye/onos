@@ -126,7 +126,8 @@ generate_gnoi()
 # For GUI2 build
 RULES_NODEJS_VERSION = "3.6.0"
 
-RULES_NODEJS_SHA256 = "0fa2d443571c9e02fcb7363a74ae591bdcce2dd76af8677a95965edf329d778a"
+#RULES_NODEJS_SHA256 = "0fa2d443571c9e02fcb7363a74ae591bdcce2dd76af8677a95965edf329d778a"
+RULES_NODEJS_SHA256 = "f3c7d87c89c1c235dc3991aab5eb1ad0af9a786ae3491111d8115d9d47dc380f"
 
 load("//tools/build/bazel:topo_workspace.bzl", "generate_topo_device")
 
@@ -136,7 +137,8 @@ http_archive(
     name = "build_bazel_rules_nodejs",
     sha256 = RULES_NODEJS_SHA256,
     urls = [
-        "https://github.com/bazelbuild/rules_nodejs/releases/download/%s/rules_nodejs-%s.tar.gz" % (RULES_NODEJS_VERSION, RULES_NODEJS_VERSION),
+        #"https://github.com/bazelbuild/rules_nodejs/releases/download/%s/rules_nodejs-%s.tar.gz" % (RULES_NODEJS_VERSION, RULES_NODEJS_VERSION),
+	"https://github.com/janboeye/rules_nodejs/releases/download/m1/m1.tar.gz",
     ],
 )
 
