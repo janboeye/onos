@@ -1,4 +1,6 @@
 # Prefix string to remove from proto import statements
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
 IMPORT_PREFIX = "github.com/openconfig/gnmi/proto/"
 
 proto_library(
