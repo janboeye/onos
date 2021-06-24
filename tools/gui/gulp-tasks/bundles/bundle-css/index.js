@@ -14,16 +14,16 @@ const bundleFiles = [
 
 const task = () => {
 
-    gulp.task('bundle-css', function () {
+    gulp.task('bundle-css', gulp.series(function () {
         return gulp.src(BundleResources(GUI_BASE, bundleFiles))
             .pipe(concat('onos.css'))
             .pipe(gulp.dest(GUI_BASE + '/dist/'))
             .on('end', () => { reload(); });
-    });
+    }));
 
-    gulp.task('watch-css', () => {
+    gulp.task('watch-css', gulp.series(() => {
         gulp.watch([GUI_BASE + 'app/**/*.css'], ['bundle-css']);
-    });
+    }));
 }
 
 export default task();

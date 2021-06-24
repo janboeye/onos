@@ -9,7 +9,7 @@ const bowerTask = () => {
 };
 
 const tasks = () => {
-    gulp.task('bower', () => bowerTask());
+    gulp.task('bower', gulp.series(() => bowerTask()));
 };
 
 export default tasks();

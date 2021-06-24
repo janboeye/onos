@@ -11,7 +11,7 @@ const test = () => {
 };
 
 const tasks = () => {
-    gulp.task('test', () => test());
+    gulp.task('test', gulp.series(() => test()));
 };
 
 export default tasks();

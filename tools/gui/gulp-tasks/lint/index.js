@@ -27,7 +27,7 @@ const lint = () => {
 };
 
 const tasks = () => {
-    gulp.task('lint', () => lint());
+    gulp.task('lint', gulp.series(() => lint()));
 };
 
 export default tasks();
