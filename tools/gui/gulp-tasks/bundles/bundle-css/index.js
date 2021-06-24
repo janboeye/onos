@@ -22,7 +22,7 @@ const task = () => {
     }));
 
     gulp.task('watch-css', gulp.series(() => {
-        gulp.watch([GUI_BASE + 'app/**/*.css'], ['bundle-css']);
+        gulp.watch([GUI_BASE + 'app/**/*.css'], gulp.series('bundle-css'));
     }));
 }
 

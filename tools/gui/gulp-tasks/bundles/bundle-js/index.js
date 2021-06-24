@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import concat from 'gulp-concat';
 import strip from 'gulp-strip-comments';
-import uglyfy from 'gulp-uglify';
+import uglyfy from 'gulp-terser';
 import sourceMaps from 'gulp-sourcemaps';
 import BundleResources from '../helpers/bundleResources';
 import { reload } from '../../dev-server';
@@ -59,10 +59,11 @@ function bundle(files, exportName) {
 const tasks = function () {
     // gulp.task('bundle-vendor', () => bundle(vendor, 'vendor.js'));
     gulp.task('bundle-js', gulp.series(() => bundle(bundleFiles, 'onos.js')));
-    gulp.task('watch-js', gulp.series(() => {
-        gulp.watch([GUI_BASE + 'app/**/*.js'], ['bundle-js']);
-    })).on('change', (event) => {
-        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+    gulp.task('watch-js', () => {
+        gulp.watch([GUI_BASE + 'app/**/*.js'], gulp.series('bundle-js'))
+            .on('change', (event) => {
+            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        });
     });
 };
 

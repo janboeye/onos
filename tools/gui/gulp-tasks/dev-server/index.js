@@ -3,7 +3,6 @@ import browserSync from 'browser-sync';
 import fs from 'fs';
 import webserver from 'gulp-webserver';
 import proxy from 'http-proxy-middleware';
-import * as Tasks  from "../bundles/bundle-js/index";
 
 let external_apps;
 let bs = null;
@@ -55,7 +54,6 @@ const serve = () => {
 };
 
 const tasks = () => {
-    gulp.task('serve', gulp.parallel(['bundle-js', 'proxy-server'], serve));
     gulp.task('proxy-server', gulp.series(function () {
         gulp.src('../../web/gui/src/main/webapp')
             .pipe(webserver({
@@ -63,6 +61,7 @@ const tasks = () => {
                 path: '/onos/ui/'
             }));
     }));
+    gulp.task('serve', gulp.series(['proxy-server'], serve));
 };
 
 export default tasks();
