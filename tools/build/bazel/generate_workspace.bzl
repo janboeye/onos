@@ -1471,9 +1471,9 @@ def generated_maven_jars():
     if "sigar" not in native.existing_rules():
         java_import_external(
             name = "sigar",
-            jar_sha256 = "5107e6b19b1d0ff2cfcd3baf0c25f0d444330273b1f2bec710e127c733f11455",
+            jar_sha256 = "22e08c46d152dd89adf82ea08588265dcd9532b05643924bfd5dc1430923c05a",
             licenses = ["notice"],
-            jar_urls = ["https://repo1.maven.org/maven2/org/knowhowlab/osgi/sigar/1.6.5_01/sigar-1.6.5_01.jar"],        )
+	    jar_urls = ["https://github.com/janboeye/org.knowhowlab.osgi.sigar/releases/download/m1/sigar-1.6.5_02-SNAPSHOT.jar"],        )
 artifact_map = {}
 artifact_map["@aopalliance_repackaged//:aopalliance_repackaged"] = "mvn:org.glassfish.hk2.external:aopalliance-repackaged:jar:2.5.0-b42"
 artifact_map["@amqp_client//:amqp_client"] = "mvn:com.rabbitmq:amqp-client:jar:3.6.1"
@@ -1699,7 +1699,7 @@ artifact_map["@aalto_xml//:aalto_xml"] = "mvn:com.fasterxml:aalto-xml:jar:1.0.0"
 artifact_map["@stax2_api//:stax2_api"] = "mvn:org.codehaus.woodstox:stax2-api:jar:4.0.0"
 artifact_map["@concurrent_hashmap//:concurrent_hashmap"] = "mvn:com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:NON-OSGI:1.0"
 artifact_map["@gnu_idn//:gnu_idn"] = "mvn:org.gnu.inet:libidn:jar:NON-OSGI:1.15"
-artifact_map["@sigar//:sigar"] = "mvn:org.knowhowlab.osgi:sigar:jar:1.6.5_01"
+artifact_map["@sigar//:sigar"] = "mvn:org.knowhowlab.osgi:sigar:jar:1.6.5.02-SNAPSHOT"
 
 def maven_coordinates(label):
     label_string = str(label)
