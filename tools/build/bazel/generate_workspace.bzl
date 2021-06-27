@@ -823,7 +823,7 @@ def generated_maven_jars():
     if "io_netty_netty_tcnative_boringssl" not in native.existing_rules():
         java_import_external(
             name = "io_netty_netty_tcnative_boringssl",
-            jar_sha256 = "4396a4412cce3fce641f2e632d5db011957d1fca3e02d10122e64d4211ce66f7",
+            jar_sha256 = "ac3de3e7c9f5c5354a9383265f8c6834ad9c3013c1778bf037f2bf08e42f1102",
             licenses = ["notice"],
             jar_urls = ["https://github.com/janboeye/netty-tcnative/releases/download/m1/netty-tcnative-boringssl-static-2.0.41.Final-SNAPSHOT-osx-aarch_64.jar"],        )
     if "objenesis" not in native.existing_rules():
@@ -1591,7 +1591,7 @@ artifact_map["@io_netty_netty_resolver//:io_netty_netty_resolver"] = "mvn:io.net
 artifact_map["@io_netty_netty_codec_http2//:io_netty_netty_codec_http2"] = "mvn:io.netty:netty-codec-http2:jar:4.1.35.Final"
 artifact_map["@io_netty_netty_codec_http//:io_netty_netty_codec_http"] = "mvn:io.netty:netty-codec-http:jar:4.1.35.Final"
 artifact_map["@io_netty_netty_codec_socks//:io_netty_netty_codec_socks"] = "mvn:io.netty:netty-codec-socks:jar:4.1.35.Final"
-artifact_map["@io_netty_netty_tcnative_boringssl//:io_netty_netty_tcnative_boringssl"] = "io.netty:netty-tcnative-boringssl-static:jar:2.0.41.Final-SNAPSHOT"
+artifact_map["@io_netty_netty_tcnative_boringssl//:io_netty_netty_tcnative_boringssl"] = "mvn:io.netty:netty-tcnative-boringssl-static:jar:2.0.41.Final-SNAPSHOT"
 artifact_map["@objenesis//:objenesis"] = "mvn:org.objenesis:objenesis:jar:2.6"
 artifact_map["@openflowj//:openflowj"] = "mvn:org.onosproject:openflowj:jar:3.2.1.onos"
 artifact_map["@org_osgi_util_function//:org_osgi_util_function"] = "mvn:org.osgi:org.osgi.util.function:jar:1.1.0"
