@@ -823,9 +823,9 @@ def generated_maven_jars():
     if "io_netty_netty_tcnative_boringssl" not in native.existing_rules():
         java_import_external(
             name = "io_netty_netty_tcnative_boringssl",
-            jar_sha256 = "ac3de3e7c9f5c5354a9383265f8c6834ad9c3013c1778bf037f2bf08e42f1102",
+            jar_sha256 = "ab39337f38a6fd935e6a5a30a5ff594a9a4e1055287a6286fb8f94adec036e84",
             licenses = ["notice"],
-            jar_urls = ["https://github.com/janboeye/netty-tcnative/releases/download/m1/netty-tcnative-boringssl-static-2.0.41.Final-SNAPSHOT-osx-aarch_64.jar"],        )
+            jar_urls = ["https://github.com/janboeye/netty-tcnative/releases/download/m1/netty-tcnative-boringssl-static-2.0.41.Final-SNAPSHOT.jar"],        )
     if "objenesis" not in native.existing_rules():
         java_import_external(
             name = "objenesis",
